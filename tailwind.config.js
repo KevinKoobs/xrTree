@@ -4,7 +4,21 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        shrink: {
+          '0%': {
+            width: '250px'
+          },
+          '100%': {
+            width: '75px'
+          }
+        }
+      },
+      animation: {
+        shrink: 'shrink 200ms forwards ease-in-out'
+      }
+    },
   },
   plugins: [],
 }
